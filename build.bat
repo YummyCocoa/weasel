@@ -296,7 +296,11 @@ rem ---------------------------------------------------------------------------
   )
   cd %WEASEL_ROOT%
   if not exist output\data\opencc mkdir output\data\opencc
+  if not exist output\data\dicts mkdir output\data\dicts
+  if not exist output\data\lua mkdir output\data\lua
   copy %WEASEL_ROOT%\librime\share\opencc\*.* output\data\opencc\
+  copy %WEASEL_ROOT%\librime\share\dicts\*.* output\data\dicts\
+  copy %WEASEL_ROOT%\librime\share\lua\*.* output\data\lua\
   if errorlevel 1 goto error
   exit /b
 
